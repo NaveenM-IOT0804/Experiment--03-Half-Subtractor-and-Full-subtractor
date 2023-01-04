@@ -26,26 +26,51 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
-
-
-
-Write the detailed procedure here 
+The half subtractor is also a building block for subtracting two binary numbers. It has two inputs and two outputs. This circuit is used to subtract two single bit binary numbers A and B. The 'diff' and 'borrow' are two output states of the half subtractor.
+A full subtractor is formed by two half subtractors, which involves three inputs such as minuend, subtrahend and borrow, borrow bit among the inputs is obtained from subtraction of two binary digits and is subtracted from next higher order pair of bits, outputs as difference and borrow.
 
 
 ## Program:
 /*
-Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Half subtractor:
+module halfsub(output b,d,input x,y);
+assign d=(x^y);
+assign b=(~x&y);
+endmodule
+
+Full subtractor:
+module fullsub(x,y,z,b,d);
+input x,y,z;
+output b,d;
+assign d=(x^y^z);
+assign b=(~x&(y^z)|(y&z));
+endmodule
+
+Developed by: NAVEEN M
+RegisterNumber: 22000748
 */
 
 ## Output:
 
 ## Truthtable
+Half subtractor :
+
+![half-subtractor](https://user-images.githubusercontent.com/117974950/210540183-58683d2e-0b42-4506-99b2-5f6c5bed954b.png)
+
+Full subtractor:
+
+![full-subtractor-truth-table](https://user-images.githubusercontent.com/117974950/210540262-6a8ccd68-9757-4c76-a15c-281f97c80dbb.jpg)
 
 
 
 ##  RTL realization
+Half subtractor:
+
+![halfsub](https://user-images.githubusercontent.com/117974950/210539551-ecf47753-43e3-4a66-82f6-ca53521b5d48.png)
+
+Full adder:
+
+![fullsub](https://user-images.githubusercontent.com/117974950/210539690-533a14e8-ee8c-41ec-81fd-31f40330ffb7.png)
 
 
 ## Timing diagram 
