@@ -85,5 +85,12 @@ Full subtractor:
 
 ## Timing diagram 
 
+Half subtractor:
+
+![halfsubwaveform](https://user-images.githubusercontent.com/117974950/210562000-6629c230-b6ed-4583-9c04-f8241d58f5e4.png)
+
+Full subtractor:
+
+
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
