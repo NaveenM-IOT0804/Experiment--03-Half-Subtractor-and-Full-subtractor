@@ -31,24 +31,32 @@ A full subtractor is formed by two half subtractors, which involves three inputs
 
 
 ## Program:
-/*
+
 Half subtractor:
+
 module halfsub(output b,d,input x,y);
+
 assign d=(x^y);
+
 assign b=(~x&y);
+
 endmodule
 
 Full subtractor:
 module fullsub(x,y,z,b,d);
+
 input x,y,z;
+
 output b,d;
+
 assign d=(x^y^z);
+
 assign b=(~x&(y^z)|(y&z));
+
 endmodule
 
 Developed by: NAVEEN M
 RegisterNumber: 22000748
-*/
 
 ## Output:
 
@@ -68,7 +76,7 @@ Half subtractor:
 
 ![halfsub](https://user-images.githubusercontent.com/117974950/210539551-ecf47753-43e3-4a66-82f6-ca53521b5d48.png)
 
-Full adder:
+Full subtractor:
 
 ![fullsub](https://user-images.githubusercontent.com/117974950/210539690-533a14e8-ee8c-41ec-81fd-31f40330ffb7.png)
 
