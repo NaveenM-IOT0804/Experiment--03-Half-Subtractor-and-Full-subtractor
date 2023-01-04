@@ -43,6 +43,7 @@ assign b=(~x&y);
 endmodule
 
 Full subtractor:
+
 module fullsub(x,y,z,b,d);
 
 input x,y,z;
@@ -56,6 +57,7 @@ assign b=(~x&(y^z)|(y&z));
 endmodule
 
 Developed by: NAVEEN M
+
 RegisterNumber: 22000748
 
 ## Output:
